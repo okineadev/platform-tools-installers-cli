@@ -1,4 +1,7 @@
-﻿[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+#!/usr/bin/env pwsh
+
+# Enable TLSv1.2 for compatibility with older clients for current session
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 
 # https://github.com/farag2/ADB-Debloating/blob/acc9a11a2688e0bb851c30a524b1f76f851f14eb/src/Download_ADB.ps1#L5-L10
 if ($Host.Version.Major -eq 5) {
